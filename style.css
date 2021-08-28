@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.score {
+    color: red;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.game {
+    width: 700px;
+    height: 450px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.character {
+    width: 40px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top: 350px;
+}
+
+.block {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    position: relative;
+    top: 310px;
+    left: 660px;
+    animation: block 1s linear infinite;
+}
+
+
+@keyframes block {
+    0%{left: 660px;}
+    100%{left: 0px;}
+}
+
+@keyframes jump {
+    0%{top: 350px;}
+    30%{top: 300px;}
+    70%{top: 300px;}
+    100%{top: 350px;}
+}
+
+.animation {
+    animation: jump 500ms;
+}
